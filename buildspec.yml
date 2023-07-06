@@ -9,8 +9,12 @@ phases:
   post_build:
     commands:
       - echo Build completed successfully
+  test:
+    commands:
       - echo Test...
       - gradle test
+  post_test:
+    commands:
       - echo Test finished
 artifacts:
   files:
