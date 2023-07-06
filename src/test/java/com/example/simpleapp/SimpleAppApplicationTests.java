@@ -16,7 +16,7 @@ class SimpleAppApplicationTests {
 
     @Test
     void test1() {
-        boolean exp = Math.random() > 0;
+        boolean exp = Math.random() > 0.5;
         assertTrue("Error", exp);
     }
 
