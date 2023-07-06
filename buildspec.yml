@@ -10,5 +10,5 @@ phases:
       - echo Build completed successfully
 artifacts:
   files:
-    - target/simple/app.jar
+    - build/libs/demo1-0.0.1-SNAPSHOT-plain.jar
   discard-paths: yes
