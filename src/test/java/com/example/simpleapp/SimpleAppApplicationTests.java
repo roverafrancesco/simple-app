@@ -5,12 +5,19 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
 
+import static org.springframework.test.util.AssertionErrors.assertTrue;
+
 @SpringBootTest
 class SimpleAppApplicationTests {
 
     @Test
     void contextLoads() {
-        Assert.isTrue(Math.random() > 0.9);
+    }
+
+    @Test
+    void test1() {
+        boolean exp = Math.random() > 0.9;
+        assertTrue("Error", exp);
     }
 
 }
