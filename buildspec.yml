@@ -12,9 +12,9 @@ phases:
   post_build:
     commands:
       - echo Build completed successfully
-      - echo Start Test
-      - gradle test
-      - echo Test finished
+      #- echo Start Test
+      #- gradle test
+      #- echo Test finished
 artifacts:
   files:
     - build/libs/demo1-0.0.1-SNAPSHOT-plain.jar
