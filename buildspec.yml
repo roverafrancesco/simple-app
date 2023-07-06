@@ -17,5 +17,5 @@ phases:
       #- echo Test finished
 artifacts:
   files:
-    - build/libs/demo1-0.0.1-SNAPSHOT-plain.jar
+    - build/libs/demo1-0.0.1-SNAPSHOT.jar
   discard-paths: yes
