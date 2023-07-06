@@ -1,10 +1,13 @@
 version: 0.2
 
 phases:
+  pre_build:
+    commands:
+      - echo Cleaning project
+      - gradle clean
   build:
     commands:
       - echo Entered the build phase...
-      - gradle clean
       - gradle build
   post_build:
     commands:
@@ -13,8 +16,6 @@ phases:
     commands:
       - echo Test...
       - gradle test
-  post_test:
-    commands:
       - echo Test finished
 artifacts:
   files:
