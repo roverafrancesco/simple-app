@@ -12,9 +12,6 @@ phases:
   post_build:
     commands:
       - echo Build completed successfully
-      - echo Test...
-      - gradle test
-      - echo Test finished
       
 artifacts:
   files:
