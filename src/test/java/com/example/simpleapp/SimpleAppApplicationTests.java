@@ -10,7 +10,7 @@ class SimpleAppApplicationTests {
 
     @Test
     void contextLoads() {
-        Assert.isTrue(Math.random() > 0.5);
+        Assert.isTrue(Math.random() > 0.9);
     }
 
 }
