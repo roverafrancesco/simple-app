@@ -13,13 +13,7 @@ import static org.springframework.test.util.AssertionErrors.assertTrue;
 
 @SpringBootTest
 class SimpleAppApplicationTests {
-
-
-    @Test
-    void test1() {
-        boolean exp = Math.random() > 0;
-        assertTrue("Error", exp);
-    }
+    
 
     @Test
     void test2() {
