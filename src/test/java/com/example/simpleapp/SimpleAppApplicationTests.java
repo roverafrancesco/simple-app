@@ -5,19 +5,38 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 import static org.springframework.test.util.AssertionErrors.assertTrue;
 
 @SpringBootTest
 class SimpleAppApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
 
     @Test
     void test1() {
-        boolean exp = Math.random() > 0.5;
+        boolean exp = Math.random() > 0;
         assertTrue("Error", exp);
+    }
+
+    @Test
+    void test2() {
+        String jdbcUrl = "jdbc:postgresql://localhost:5432/postgres";
+        String username = "postgres";
+        String password = "postgres";
+
+        try {
+            Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+            System.out.println("Connessione al database riuscita!");
+            connection.close();
+
+        } catch (SQLException e) {
+            System.out.println("Connessione al database fallita!");
+            e.printStackTrace();
+            assert false : "Il test di connessione al database è fallito!";
+        }
     }
 
 }
