@@ -13,7 +13,11 @@ import static org.springframework.test.util.AssertionErrors.assertTrue;
 
 @SpringBootTest
 class SimpleAppApplicationTests {
-    
+
+    @Test
+    void test1() {
+        assertTrue("msg", true);
+    }
 
     @Test
     void test2() {
