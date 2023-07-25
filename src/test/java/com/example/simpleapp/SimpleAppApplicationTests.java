@@ -20,6 +20,7 @@ class SimpleAppApplicationTests {
     @Test
     void test2() {
         String jdbcUrl = "jdbc:postgresql://localhost:5432/postgres";
+        jdbcUrl = "jdbc:postgresql://database-1.cetovszcafkv.us-east-1.rds.amazonaws.com\n";
         String username = "postgres";
         String password = "postgres";
 
