@@ -5,9 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 import static org.springframework.test.util.AssertionErrors.assertTrue;
 
@@ -28,9 +26,11 @@ class SimpleAppApplicationTests {
         try {
             Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
             System.out.println("Connessione al database riuscita!");
-            connection.close();
 
-        } catch (SQLException e) {
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM person");
+            connection.close();
+        } catch (Exception e) {
             System.out.println("Connessione al database fallita!");
             e.printStackTrace();
             assert false : "Il test di connessione al database è fallito!";
